@@ -1005,8 +1005,6 @@
             gap: 10px;
             margin-bottom: 50px;
             animation: fadeIn 0.8s ease 0.2s both;
-            position: relative;
-            z-index: 10;
         }
 
         .tab-button {
@@ -1019,9 +1017,6 @@
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
-            position: relative;
-            z-index: 10;
-            pointer-events: auto;
         }
 
         .tab-button:hover {
@@ -1157,8 +1152,6 @@
             gap: 15px;
             margin-bottom: 40px;
             animation: fadeIn 0.8s ease 0.2s both;
-            position: relative;
-            z-index: 10;
         }
 
         .pricing-toggle-label {
@@ -1177,7 +1170,6 @@
             display: inline-block;
             width: 60px;
             height: 30px;
-            z-index: 10;
         }
 
         .toggle-switch input {
@@ -1196,8 +1188,6 @@
             background-color: #34495e;
             transition: 0.4s;
             border-radius: 30px;
-            z-index: 5;
-            pointer-events: auto;
         }
 
         .toggle-slider:before {
@@ -1655,9 +1645,6 @@
             display: flex;
             align-items: center;
             gap: 8px;
-            position: relative;
-            z-index: 10;
-            pointer-events: auto;
         }
 
         .form-tab-button:hover {
@@ -1675,16 +1662,22 @@
 
         .form-container {
             display: none;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
+            animation: fadeIn 0.5s ease;
         }
 
         .form-container.active-form {
             display: block;
-            opacity: 1;
-            transform: translateY(0);
-            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
 
         .footer-copyright {
@@ -2438,7 +2431,7 @@
                             </div>
                         </li>
                     </ul>
-                    <a href="#contact-form" onclick="showForm('demo'); return false;" class="header-cta-button">Get Started</a>
+                    <a href="#contact-form" onclick="showForm('demo'); return true;" class="header-cta-button">Get Started</a>
                 </nav>
             </div>
         </header>
@@ -2454,7 +2447,7 @@
                     <h1>Cutting-Edge Solutions That Drive Your Business <span>Forward</span></h1>
                     <p class="description">Gain the competitive advantage by combining HD Audio, Video, Messaging, and CRM integration all from one secure and simplified interface.</p>
                     <div class="hero-cta-group">
-                        <a href="#contact-form" onclick="showForm('demo'); return false;" class="cta-button cta-primary">Schedule a Demo</a>
+                        <a href="#contact-form" onclick="showForm('demo'); return true;" class="cta-button cta-primary">Schedule a Demo</a>
                         <a href="#pricing-plans" class="cta-button cta-secondary">View Pricing</a>
                     </div>
                 </div>
@@ -2733,8 +2726,8 @@
                         <li><span class="checkmark">✓</span> Real-Time Performance Analytics</li>
                     </ul>
                     <div class="ai-cta-group">
-                        <a href="#contact-form" onclick="showForm('demo'); return false;" class="cta-button ai-cta-primary">Start Trial</a>
-                        <a href="#contact-form" onclick="showForm('demo'); return false;" class="cta-button ai-cta-secondary">Schedule Demo</a>
+                        <a href="#contact-form" onclick="showForm('demo'); return true;" class="cta-button ai-cta-primary">Start Trial</a>
+                        <a href="#contact-form" onclick="showForm('demo'); return true;" class="cta-button ai-cta-secondary">Schedule Demo</a>
                     </div>
                 </div>
             </div>
@@ -2844,7 +2837,7 @@
                                 <li>100 Toll-free minutes</li>
                             </ul>
                         </div>
-                        <button class="plan-button" onclick="showForm('sales'); return false;">Get Started</button>
+                        <button class="plan-button" onclick="showForm('sales'); return true;">Get Started</button>
                     </div>
 
                     <div class="plan-card">
@@ -2866,7 +2859,7 @@
                                 <li>Desktop Application</li>
                             </ul>
                         </div>
-                        <button class="plan-button" onclick="showForm('sales'); return false;">Get Started</button>
+                        <button class="plan-button" onclick="showForm('sales'); return true;">Get Started</button>
                     </div>
 
                     <div class="plan-card popular">
@@ -2888,7 +2881,7 @@
                                 <li>1,000 Toll-free minutes</li>
                             </ul>
                         </div>
-                        <button class="plan-button primary" onclick="showForm('demo'); return false;">Start Trial</button>
+                        <button class="plan-button primary" onclick="showForm('demo'); return true;">Start Trial</button>
                     </div>
 
                     <div class="plan-card">
@@ -2906,7 +2899,7 @@
                                 <li>Priority Support</li>
                             </ul>
                         </div>
-                        <button class="plan-button" onclick="showForm('sales'); return false;">Contact Sales</button>
+                        <button class="plan-button" onclick="showForm('sales'); return true;">Contact Sales</button>
                     </div>
                 </div>
 
@@ -2932,7 +2925,7 @@
                                     <li>Native CRM integrations</li>
                                 </ul>
                             </div>
-                            <button class="plan-button primary" onclick="showForm('demo'); return false;">Get Demo</button>
+                            <button class="plan-button primary" onclick="showForm('demo'); return true;">Get Demo</button>
                         </div>
 
                         <div class="plan-card">
@@ -2953,7 +2946,7 @@
                                     <li>Enterprise CRM integrations</li>
                                 </ul>
                             </div>
-                            <button class="plan-button" onclick="showForm('sales'); return false;">Contact Sales</button>
+                            <button class="plan-button" onclick="showForm('sales'); return true;">Contact Sales</button>
                         </div>
                     </div>
                 </div>
@@ -3022,7 +3015,7 @@
             <div class="ai-cta-content">
                 <h2 class="ai-future-headline">Ready for the Future?</h2>
                 <div class="final-cta-group">
-                    <a href="#contact-form" onclick="showForm('sales'); return false;" class="final-cta-button primary">Contact Sales</a>
+                    <a href="#contact-form" onclick="showForm('sales'); return true;" class="final-cta-button primary">Contact Sales</a>
                     <a href="tel:+12484363600" class="final-cta-button secondary">Call Us</a>
                 </div>
             </div>
@@ -3036,22 +3029,22 @@
                 </div>
                 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 40px; margin-bottom: 40px; max-width: 900px; margin-left: auto; margin-right: auto;">
-                    <button class="form-tab-button active" onclick="showForm('general'); return false;" id="general-tab">
+                    <button class="form-tab-button active" onclick="showForm('general'); return true;" id="general-tab">
                         📧 General
                     </button>
-                    <button class="form-tab-button" onclick="showForm('demo'); return false;" id="demo-tab">
+                    <button class="form-tab-button" onclick="showForm('demo'); return true;" id="demo-tab">
                         🎯 Demo
                     </button>
-                    <button class="form-tab-button" onclick="showForm('sales'); return false;" id="sales-tab">
+                    <button class="form-tab-button" onclick="showForm('sales'); return true;" id="sales-tab">
                         💼 Sales
                     </button>
-                    <button class="form-tab-button" onclick="showForm('support'); return false;" id="support-tab">
+                    <button class="form-tab-button" onclick="showForm('support'); return true;" id="support-tab">
                         🛠️ Support
                     </button>
-                    <button class="form-tab-button" onclick="showForm('career'); return false;" id="career-tab">
+                    <button class="form-tab-button" onclick="showForm('career'); return true;" id="career-tab">
                         👔 Careers
                     </button>
-                    <button class="form-tab-button" onclick="showForm('partner'); return false;" id="partner-tab">
+                    <button class="form-tab-button" onclick="showForm('partner'); return true;" id="partner-tab">
                         🤝 Partner
                     </button>
                 </div>
@@ -3414,19 +3407,12 @@
             });
         });
 
-        // Form Tab Navigation Function - FIXED VERSION
+        // Form Tab Navigation Function
         function showForm(formType) {
-            // Prevent default behavior
-            if (event) {
-                event.preventDefault();
-                event.stopPropagation();
-            }
-            
             // Hide all forms
             const allForms = document.querySelectorAll('.form-container');
             allForms.forEach(form => {
                 form.classList.remove('active-form');
-                form.style.display = 'none';
             });
 
             // Remove active class from all buttons
@@ -3435,13 +3421,10 @@
                 button.classList.remove('active');
             });
 
-            // Show selected form immediately
+            // Show selected form
             const selectedForm = document.getElementById(formType + '-form');
             if (selectedForm) {
-                selectedForm.style.display = 'block';
-                setTimeout(() => {
-                    selectedForm.classList.add('active-form');
-                }, 50);
+                selectedForm.classList.add('active-form');
             }
 
             // Add active class to selected button
@@ -3450,23 +3433,21 @@
                 selectedButton.classList.add('active');
             }
 
-            // Scroll to form section
-            setTimeout(() => {
-                const formSection = document.getElementById('contact-form');
-                if (formSection) {
-                    const announcementBar = document.getElementById('announcementBar');
-                    const announcementHeight = announcementBar && announcementBar.style.display !== 'none' ? 42 : 0;
-                    const mainHeaderHeight = 55;
-                    const adminBarHeight = document.getElementById('wpadminbar') ? 32 : 0;
-                    const totalOffset = announcementHeight + mainHeaderHeight + adminBarHeight + 10;
-                    
-                    const targetPosition = formSection.getBoundingClientRect().top + window.pageYOffset - totalOffset;
-                    window.scrollTo({
-                        top: targetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }, 100);
+            // Smooth scroll to form section
+            const formSection = document.getElementById('contact-form');
+            if (formSection) {
+                const announcementBar = document.getElementById('announcementBar');
+                const announcementHeight = announcementBar && announcementBar.style.display !== 'none' ? 42 : 0;
+                const mainHeaderHeight = 55;
+                const adminBarHeight = document.getElementById('wpadminbar') ? 32 : 0;
+                const totalOffset = announcementHeight + mainHeaderHeight + adminBarHeight + 10;
+
+                const targetPosition = formSection.getBoundingClientRect().top + window.pageYOffset - totalOffset;
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
         }
     </script>
 </body>
