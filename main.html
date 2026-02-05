@@ -1005,6 +1005,8 @@
             gap: 10px;
             margin-bottom: 50px;
             animation: fadeIn 0.8s ease 0.2s both;
+            position: relative;
+            z-index: 10;
         }
 
         .tab-button {
@@ -1017,6 +1019,9 @@
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
+            position: relative;
+            z-index: 10;
+            pointer-events: auto;
         }
 
         .tab-button:hover {
@@ -1152,6 +1157,8 @@
             gap: 15px;
             margin-bottom: 40px;
             animation: fadeIn 0.8s ease 0.2s both;
+            position: relative;
+            z-index: 10;
         }
 
         .pricing-toggle-label {
@@ -1170,6 +1177,7 @@
             display: inline-block;
             width: 60px;
             height: 30px;
+            z-index: 10;
         }
 
         .toggle-switch input {
@@ -1188,6 +1196,8 @@
             background-color: #34495e;
             transition: 0.4s;
             border-radius: 30px;
+            z-index: 5;
+            pointer-events: auto;
         }
 
         .toggle-slider:before {
@@ -1645,6 +1655,9 @@
             display: flex;
             align-items: center;
             gap: 8px;
+            position: relative;
+            z-index: 10;
+            pointer-events: auto;
         }
 
         .form-tab-button:hover {
